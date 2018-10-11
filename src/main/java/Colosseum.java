@@ -36,7 +36,7 @@ public class Colosseum {
      * Input scanner. Use this to take in user's input for buildPokemon(). <br>
      * Useful functions: next(), nextInt() .
      */
-    static Scanner myScan;
+    static Scanner myScan = new Scanner(System.in);
 
     /**
      * We are now reimplementing this to meet our new Pokemon specifications. <br>
@@ -102,6 +102,40 @@ public class Colosseum {
      * (Look, we can return objects too!)
      */
     public static Pokemon buildPokemon() {
+
+        Pokemon user = new Pokemon();
+
+
+
+        System.out.println("Choose your Pokemon TYPE!");
+        System.out.println("1 - Electric Pokemon");
+        System.out.println("2 - Fire Pokemon");
+        System.out.println("3 - Water Pokemon");
+        int choice = myScan.nextInt();
+
+        while (true) {
+
+
+            System.out.println("Please choose either 1, 2, or 3");
+            choice = myScan.nextInt();
+
+            
+        }
+
+        if (choice == 1) {
+            user = new ElectricPokemon();
+        }
+        if (choice == 2) {
+            user = new FirePokemon();
+        }
+        if (choice == 3) {
+            user = new WaterPokemon();
+        }
+
+
+
+
+
         Pokemon returnPokemon = null;
         return returnPokemon;
     }
